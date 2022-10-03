@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import App from './App'
 
 import { setupStore } from './core/store/store'
-import { BaseTheme, theme } from 'core/theme'
+import { BaseTheme, FontsStyles, theme } from "core/theme"
 
 const store = setupStore()
 
@@ -15,6 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <>
     <BaseTheme />
+    <FontsStyles/>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <App />
